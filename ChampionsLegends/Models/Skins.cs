@@ -12,7 +12,7 @@ namespace ChampionsLegends.Models
 
         public Skins()
         {
-            this.ListaFotos = new HashSet<FotosSkns>();
+            //this.ListaFotos = new HashSet<FotosSkns>();
         }
 
         [Key] public int ID_Skin { get; set; }
@@ -23,9 +23,11 @@ namespace ChampionsLegends.Models
 
         public string Cor { get; set; }
 
+        public string Foto { get; set; }
+
         [ForeignKey("Champion")] public int ChampionFK { get; set; }
         public virtual Champions Champion { get; set; }
 
-        public virtual ICollection<FotosSkns> ListaFotos { get; set; }
+        //public virtual ICollection<FotosSkns> ListaFotos { get; set; }
     }
 }

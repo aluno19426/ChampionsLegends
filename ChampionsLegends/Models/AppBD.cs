@@ -11,7 +11,7 @@ namespace ChampionsLegends.Models {
 
         public virtual DbSet<Abilities> Abilities { get; set; }
         public virtual DbSet<Champions> Champions { get; set; }
-        public virtual DbSet<FotosSkns> FotosSkns { get; set; }
+        //public virtual DbSet<FotosSkns> FotosSkns { get; set; }
         public virtual DbSet<Skins> Skins { get; set; }
 
     }

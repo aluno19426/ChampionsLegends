@@ -174,7 +174,6 @@
     <Compile Include="Models\Abilities.cs" />
     <Compile Include="Models\AppBD.cs" />
     <Compile Include="Models\Champions.cs" />
-    <Compile Include="Models\FotosSkns.cs" />
     <Compile Include="Models\Skins.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
