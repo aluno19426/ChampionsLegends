@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -166,11 +167,14 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ChampionsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="DTO\Champions\GetChampions.cs" />
+    <Compile Include="DTO\Champions\GetSingleChampion.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="fonts\Migrations\Configuration.cs" />
     <Compile Include="Models\Abilities.cs" />
     <Compile Include="Models\AppBD.cs" />
     <Compile Include="Models\Champions.cs" />
@@ -241,7 +245,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>26012</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

@@ -9,7 +9,7 @@ namespace ChampionsLegends.Models {
     public class Abilities {
 
         [Key]
-        public int ID_Abilidade { get; set; }
+        public int ID_Abilities { get; set; }
 
         public string Nome { get; set; }
 
@@ -19,6 +19,7 @@ namespace ChampionsLegends.Models {
 
         [ForeignKey ("Champion")]
         public int ChampionFK { get; set; }
+
         public virtual Champions Champion { get; set; }
 
     }

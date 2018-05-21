@@ -10,6 +10,8 @@ namespace ChampionsLegends
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
+            config.Formatters.Remove (config.Formatters.XmlFormatter);
+            config.Formatters.JsonFormatter.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
 
             // Web API routes
             config.MapHttpAttributeRoutes();
@@ -18,6 +20,12 @@ namespace ChampionsLegends
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
+            );
+
+            config.Routes.MapHttpRoute (
+                name: "Champions",
+                routeTemplate: "api/{controller}/",
+                defaults: new { controller="champions"}
             );
         }
     }

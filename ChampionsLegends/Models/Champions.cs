@@ -8,11 +8,7 @@ using System.Web;
 namespace ChampionsLegends.Models {
     public class Champions {
 
-        public Champions()
-        {
-            this.ListaAbilidades = new HashSet<Abilities>();
-            this.ListaSkins = new HashSet<Skins>();
-        }
+        public Champions(){}
 
 
         [Key]
@@ -32,7 +28,7 @@ namespace ChampionsLegends.Models {
 
         public string RelatedChampions { get; set; }
 
-        public virtual ICollection<Abilities> ListaAbilidades { get; set; }
-        public virtual ICollection<Skins> ListaSkins { get; set; }
+        public virtual ICollection<Abilities> ListaAbilities { get; set; } = new HashSet<Abilities> ();
+        public virtual ICollection<Skins> ListaSkins { get; set; } = new HashSet<Skins> ();
     }
 }
