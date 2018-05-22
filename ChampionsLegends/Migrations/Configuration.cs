@@ -8,7 +8,7 @@ namespace ChampionsLegends.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<AppBD>
+    internal sealed class Configuration : DbMigrationsConfiguration<ChampionsLegends.Models.AppBD>
     {
         public Configuration()
         {
@@ -124,8 +124,6 @@ namespace ChampionsLegends.Migrations
 
             var skin = new List<Skins> {
 
-                /**Irelia**/
-
                 new Skins {ID_Skin = 1, Nome = "Classic Irelia", Foto = "teste.jpg", Cor = "Vermelho", Data_Lancamento = "16-Nov-2010", ChampionFK = 1},
                 new Skins {ID_Skin = 2, Nome = "Nightblade Irelia", Foto = "teste.jpg", Cor = "Preto", Data_Lancamento = "16-Nov-2010", ChampionFK = 1},
                 new Skins {ID_Skin = 3, Nome = "Aviator Irelia", Foto = "teste.jpg", Cor = "Castanho", Data_Lancamento = "16-Nov-2010", ChampionFK = 1},
@@ -143,6 +141,50 @@ namespace ChampionsLegends.Migrations
                 new Skins {ID_Skin = 12, Nome = "Super Galaxy Fizz", Foto = "teste.jpg", Cor = "Azul", Data_Lancamento = "26-May-2016", ChampionFK = 2},
                 new Skins {ID_Skin = 13, Nome = "Omega Squad Fizz", Foto = "teste.jpg", Cor = "Azul", Data_Lancamento = "27-Jul-2017", ChampionFK = 2},
 
+                /******Orianna*******/
+                new Skins {ID_Skin = 14, Nome = "Classic Orianna", Foto = "teste.jpg", Cor = "Vermelho", Data_Lancamento = "1-Jun-2010", ChampionFK = 3},
+                new Skins {ID_Skin = 15, Nome = "Gothic Orianna", Foto = "teste.jpg", Cor = "Roxo", Data_Lancamento = "1-Jun-2010", ChampionFK = 3},
+                new Skins {ID_Skin = 16, Nome = "Sewn Chaos", Foto = "teste.jpg", Cor = "Verde e Roxo", Data_Lancamento = "1-Jun-2010", ChampionFK = 3},
+                new Skins {ID_Skin = 17, Nome = "Bladecraft Orianna", Foto = "teste.jpg", Cor = "Preto", Data_Lancamento = "29-Feb-2012", ChampionFK = 3},
+                new Skins {ID_Skin = 18, Nome = "Dark Star Orianna", Foto = "teste.jpg", Cor = "Roxo", Data_Lancamento = "05-Apr-2017", ChampionFK = 3},
+
+                /****Ahri***/
+                new Skins {ID_Skin = 19, Nome = "Classic Ahri", Foto = "teste.jpg", Cor = "Vermelho e Branco", Data_Lancamento = "14-Dec-2011", ChampionFK = 4},
+                new Skins {ID_Skin = 20, Nome = "Dynasty Ahri", Foto = "teste.jpg", Cor = "Roso e Branco", Data_Lancamento = "14-Dec-2011", ChampionFK = 4},
+                new Skins {ID_Skin = 21, Nome = "Midnight Ahri", Foto = "teste.jpg", Cor = "Azul", Data_Lancamento = "14-Dec-2011", ChampionFK = 4},
+                new Skins {ID_Skin = 22, Nome = "Foxfire Ahri", Foto = "teste.jpg", Cor = "Vermelho", Data_Lancamento = "11-Jul-2012", ChampionFK = 4},
+                new Skins {ID_Skin = 23, Nome = "Popstar Ahri", Foto = "teste.jpg", Cor = "Rosa", Data_Lancamento = "25-Nov-2013", ChampionFK = 4},
+                new Skins {ID_Skin = 24, Nome = "Academy Ahri", Foto = "teste.jpg", Cor = "Azul/Branco", Data_Lancamento = "27-Aug-2015", ChampionFK = 4},
+                new Skins {ID_Skin = 25, Nome = "Arcade Ahri", Foto = "teste.jpg", Cor = "Azul", Data_Lancamento = "26-May-2016", ChampionFK = 4},
+                new Skins {ID_Skin = 26, Nome = "Star Guardian Ahri", Foto = "teste.jpg", Cor = "Branco e Vermelho", Data_Lancamento = " 07-Sep-2017", ChampionFK = 4 },
+
+                /***Jinx***/
+                new Skins {ID_Skin = 27, Nome = "Classic Jinx", Foto = "teste.jpg", Cor = "Azul e Rosa", Data_Lancamento = "10-Oct-2013", ChampionFK = 5},
+                new Skins {ID_Skin = 28, Nome = "Mafia Jinx", Foto = "teste.jpg", Cor = "Rosa", Data_Lancamento = "10-Oct-2013", ChampionFK = 5},
+                new Skins {ID_Skin = 29, Nome = "Firecracker Jinx", Foto = "teste.jpg", Cor = "Vermelho", Data_Lancamento = "10-Feb-2015", ChampionFK = 5},
+                new Skins {ID_Skin = 30, Nome = "Star Guardian Jinx", Foto = "teste.jpg", Cor = "Branco", Data_Lancamento = "06-Oct-2016", ChampionFK = 5},
+
+                /***Sivir***/
+                new Skins {ID_Skin = 31, Nome = "Classic Sivir", Foto = "teste.jpg", Cor = "Amarelo", Data_Lancamento = "27-Oct-2009", ChampionFK = 6},
+                new Skins {ID_Skin = 32, Nome = "Warrior Princess Sivir", Foto = "teste.jpg", Cor = "Rosa", Data_Lancamento = "27-Apr-2010", ChampionFK = 6},
+                new Skins {ID_Skin = 33, Nome = "Huntress Sivir", Foto = "teste.jpg", Cor = "Vermelho", Data_Lancamento = "07-Feb-2011", ChampionFK = 6},
+                new Skins {ID_Skin = 34, Nome = "Bandit Sivir", Foto = "teste.jpg", Cor = "Branco", Data_Lancamento = "21-Mar-2011", ChampionFK = 6},
+                
+                /**Olaf**/
+                new Skins {ID_Skin = 35, Nome = "Classic Olaf", Foto = "teste.jpg", Cor = "Azul", Data_Lancamento = "08-Jun-2010", ChampionFK = 7},
+                new Skins {ID_Skin = 36, Nome = "Brolaf", Foto = "teste.jpg", Cor = "Verde e Azul", Data_Lancamento = "01-Dec-2010", ChampionFK = 7},
+
+                /**Jarvan IV**/
+                new Skins {ID_Skin = 37, Nome = "Classic Jarvan IV", Foto = "teste.jpg", Cor = "Azul", Data_Lancamento = "01-Mar-2011", ChampionFK = 8},
+                new Skins {ID_Skin = 38, Nome = "Victorious Jarvan IV", Foto = "teste.jpg", Cor = "Cinzento", Data_Lancamento = "23-Aug-2011", ChampionFK = 8},
+
+                /**Caitlyn **/
+                new Skins {ID_Skin = 39, Nome = "Classic Caitlyn", Foto = "teste.jpg", Cor = "Azul", Data_Lancamento = "01-Jan-2011", ChampionFK = 9},
+                new Skins {ID_Skin = 40, Nome = "Pulsefire Caitlyn", Foto = "teste.jpg", Cor = "Cinzento", Data_Lancamento = "23-Aug-2011", ChampionFK = 9},
+              
+                /**Lee Sin **/
+                new Skins {ID_Skin = 41, Nome = "Classic Lee Sin", Foto = "teste.jpg", Cor = "Vermelho", Data_Lancamento = "01-Apr-2011", ChampionFK = 10},
+                new Skins {ID_Skin = 42, Nome = "Muay Thai Lee Sin", Foto = "teste.jpg", Cor = "Vermelho", Data_Lancamento = "24-Jul-2012", ChampionFK = 10},
 
             };
             skin.ForEach (aa => context.Skins.AddOrUpdate (a => a.Nome,aa));

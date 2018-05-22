@@ -9,18 +9,20 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Data.Entity;
+using System.Drawing;
+using System.Web.Http.Results;
 
 namespace ChampionsLegends.Controllers
 {
     public class ChampionsController : ApiController
     {
-        private AppBD appBD = new AppBD ();
+        private readonly AppBD _appBd = new AppBD ();
 
         [HttpGet, Route("api/champions")]
         public IHttpActionResult GetChamps () {
 
 
-            var champions = appBD.Champions
+            var champions = _appBd.Champions
                 .Select(c => new GetChampions {
                     Nome = c.Nome,
                     Id = c.ID_Champion
@@ -29,7 +31,7 @@ namespace ChampionsLegends.Controllers
                 .ToList();
 
 
-            if (champions == null) {
+            if (champions.Count == 0) {
                return NotFound();
             }
 
@@ -37,7 +39,7 @@ namespace ChampionsLegends.Controllers
         }
 
 
-        [HttpGet, Route ("api/champions/{id}")]
+        [HttpGet, Route ("api/champions/{id:int}")]
         public IHttpActionResult GetChamps (int? id) {
 
 
@@ -46,48 +48,46 @@ namespace ChampionsLegends.Controllers
             }
 
 
-            var champion = appBD.Champions
-                .Include(c => c.ListaAbilities)
-                .Include(c => c.ListaSkins)
+            var champion = _appBd.Champions
                 .Where (c => c.ID_Champion == id)
-                .Select (c => new GetSingleChampion {
-                    Nome = c.Nome,
+                .Include (c => c.ListaAbilities)
+                .Include(c => c.ListaSkins)
+                .Select(c => new GetSingleChampion 
+                {
                     Id = c.ID_Champion,
-                    ListaAbilities = c.ListaAbilities
+                    Nome = c.Nome,
+                    Abilities = c.ListaAbilities
+                        .Select(a => new GetSingleChampion.AbilitiesSingleChamp {
+                            Id = a.ID_Abilities,
+                            Nome = a.Nome,
+                            Custo = a.Custo,
+                            Range = a.Range
+                        })
                         .ToList(),
-                        //.Select(a => new Abilities 
-                        //{
-                        //    ID_Abilities = a.ID_Abilities,
-                        //    Nome = a.Nome,
-                        //    Custo = a.Custo,
-                        //    Range = a.Range
-                        //}).ToList (),
                     Foto = c.Foto,
                     Historia = c.Historia,
-                    ListaSkins = c.ListaSkins
+                    Skins = c.ListaSkins
+                        .Select(s => new GetSingleChampion.SkinsSingleChamp {
+                            Id = s.ID_Skin,
+                            Nome = s.Nome,
+                            Cor = s.Cor,
+                            Foto = s.Foto,
+                            Data_Lancamento = s.Data_Lancamento
+                        })
                         .ToList(),
-                        //.Select (s => new Skins 
-                        //{
-                        //    ID_Skin = s.ID_Skin,
-                        //    Nome = s.Nome,
-                        //    Cor = s.Cor,
-                        //    Foto = s.Foto,
-                        //    Data_Lancamento = s.Data_Lancamento
-                        //}).ToList (),
                     Region = c.Region,
                     RelatedChampions = c.RelatedChampions,
                     Role = c.Role,
                     Titulo = c.Titulo
-                }).FirstOrDefault();
+                })
+                .FirstOrDefault();
 
-
-            if(champion == null) {
-                return NotFound ();
+            if(champion == null)
+            {
+                return NotFound();
             }
 
             return Ok (champion);
         }
-
-
     }
 }
