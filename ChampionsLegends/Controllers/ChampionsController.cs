@@ -24,17 +24,17 @@ namespace ChampionsLegends.Controllers
 
             var champions = _appBd.Champions
                 .Select(c => new GetChampions {
+                    Id = c.ID_Champion,
                     Nome = c.Nome,
-                    Id = c.ID_Champion
+                    Foto = c.Foto
                 })
                 .OrderBy(c=> c.Nome)
                 .ToList();
-
-
+            
             if (champions.Count == 0) {
                return NotFound();
             }
-
+            
             return Ok(champions);
         }
 
@@ -42,11 +42,9 @@ namespace ChampionsLegends.Controllers
         [HttpGet, Route ("api/champions/{id:int}")]
         public IHttpActionResult GetChamps (int? id) {
 
-
             if (id == null) {
                return BadRequest ();
             }
-
 
             var champion = _appBd.Champions
                 .Where (c => c.ID_Champion == id)

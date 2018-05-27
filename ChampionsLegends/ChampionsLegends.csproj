@@ -181,20 +181,52 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="assets\bootstrap\css\bootstrap.min.css" />
+    <Content Include="assets\bootstrap\js\bootstrap.min.js" />
+    <Content Include="assets\css\Navigation-with-Search.css" />
+    <Content Include="assets\css\styles.css" />
+    <Content Include="assets\fonts\font-awesome.min.css" />
+    <Content Include="assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\img\ahrigif.gif" />
+    <Content Include="assets\img\fundo.jpg" />
+    <Content Include="assets\img\giphy.gif" />
+    <Content Include="assets\img\league.jpg" />
+    <Content Include="assets\img\tee.png" />
+    <Content Include="assets\img\wu.jpg" />
+    <Content Include="assets\js\jquery.min.js" />
+    <Content Include="Content\assets\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\assets\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\assets\css\Navigation-with-Search.css" />
+    <Content Include="Content\assets\css\styles.css" />
+    <Content Include="Content\assets\fonts\font-awesome.min.css" />
+    <Content Include="Content\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\assets\img\ahrigif.gif" />
+    <Content Include="Content\assets\img\fundo.jpg" />
+    <Content Include="Content\assets\img\giphy.gif" />
+    <Content Include="Content\assets\img\league.jpg" />
+    <Content Include="Content\assets\img\tee.png" />
+    <Content Include="Content\assets\img\wu.jpg" />
+    <Content Include="Content\assets\js\jquery.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
     <Content Include="index.html" />
-    <Content Include="JavaScript\getDados.js" />
-    <Content Include="JavaScript\WebPage.js" />
+    <Content Include="JavaScript\webPage.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\assets\fonts\FontAwesome.otf" />
+    <Content Include="assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assets\fonts\FontAwesome.otf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
