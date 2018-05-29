@@ -1,0 +1,28 @@
+#video {
+    margin-top: 10%;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#Champ {
+    cursor: pointer;
+}
+
+#containerChamp {
+    position: absolute;
+    margin: 0 auto;
+    width: 50%;
+    margin-left: 35%;
+    margin-top: 10%;
+}
+.img-categories {
+    object-fit: cover;
+    vertical-align: middle;
+    border-style: none;
+    opacity: 0.5;
+}
+#main {
+    position: relative;
+}
