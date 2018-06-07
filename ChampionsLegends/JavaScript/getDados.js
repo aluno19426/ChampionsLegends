@@ -15,3 +15,19 @@ function getChampions() {
             }
         });
 }
+
+
+function getChampion(champId) {
+
+    var champion = "http://localhost:26012/api/champions/"+champId;
+
+    return fetch(champion, { headers: { Accept: 'application/json' } })
+        .then(function (resposta) {
+            //debugger;
+            if (resposta.status === 200) {
+                return resposta.json();
+            } else {
+                return Promise.reject(new Error("Erro ao obter categorias"));
+            }
+        });
+}

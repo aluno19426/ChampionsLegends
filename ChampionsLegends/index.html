@@ -12,8 +12,9 @@
     <link rel="icon" type="image/png" href="/assets/img/tee.png" />
 </head>
 
-<body>
-    <nav id="nav" class="navbar navbar-light navbar-expand-md navigation-clean-search" style="opacity: 0.9; background-image:url('assets/img/fundo.jpg');background-repeat:no-repeat;background-size:cover;background-position:center;/*height:100vh;*/height:5;">
+<body>    
+    
+<nav id="nav" class="navbar navbar-light navbar-expand-md navigation-clean-search" style="opacity: 0.9; background-image:url('assets/img/fundo.jpg');background-repeat:no-repeat;background-size:cover;background-position:center;/*height:100vh;*/height:5;">
         <div class="container">
             <div>
                 <a class="navbar-brand" href="#">
@@ -39,7 +40,7 @@
                         <label for="search-field">
                             <i class="fa fa-search"></i>
                         </label>
-                        <input class="form-control search-field" type="search" name="search" id="search-field" style="margin:15px;">
+                        <input id="procura" class="form-control search-field" type="search" name="search" id="search-field" style="margin:15px;">
                     </div>
                 </form>
                 <button class="btn btn-link" type="button" id="bt">
@@ -48,6 +49,7 @@
             </div>
         </div>
     </nav>
+    
     <div id="main">
         <div class="row" id="containerChamp">
         </div>
@@ -62,6 +64,9 @@
                 </div>
             </video>
             <p style="text-align: center; font-size: 36px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: rgb(94, 158, 32)">联赛永远不会死</p>
+        </div>
+        <div id="detalheChamp">
+
         </div>
     </div>
     <script src="assets/js/jquery.min.js"></script>
